@@ -1,13 +1,13 @@
-package com.example.demo;
+package com.example.cliente;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CatalogoClienteApplicationTests {
+class ClienteApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }

@@ -1,46 +1,34 @@
-package com.example.demo.services.Impl;
-
-import java.util.Optional;
-
+package com.example.cliente.service.impl;
+import com.example.cliente.entity.Cliente;
+import com.example.cliente.repository.ClienteRepository;
+import com.example.cliente.service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.example.demo.entity.Cliente;
-import com.example.demo.repository.ClienteRepository;
-import com.example.demo.services.ClienteServices;
 import java.util.List;
+import java.util.Optional;
 
-
-/**
- * ClienteServicesImpl
- */
 @Service
-public class ClienteServicesImpl implements ClienteServices {
-
+public class ClienteServiceimpl implements ClienteService {
     @Autowired
     private ClienteRepository clienteRepository;
     @Override
-    public List<Cliente> listar() {
+    public List<Cliente> listar(){
         return clienteRepository.findAll();
     }
     @Override
     public Cliente guardar(Cliente cliente) {
         return clienteRepository.save(cliente);
     }
-
     @Override
     public Cliente actualizar(Cliente cliente) {
         return clienteRepository.save(cliente);
     }
-
     @Override
-    public Optional<Cliente> listaPorld(Integer id) {
+    public Optional<Cliente> listarPorId(Integer id){
         return clienteRepository.findById(id);
     }
-
     @Override
-    public void eliminar(Integer id) {
+    public void eliminarPorId(Integer id) {
         clienteRepository.deleteById(id);
     }
-    
 }
